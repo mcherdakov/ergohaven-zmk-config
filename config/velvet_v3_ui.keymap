@@ -140,7 +140,7 @@
 };
 
 &trackball_listener {
-    input-processors = <&zip_xy_scaler 15 20>;
+    input-processors = <&zip_xy_scaler 20 20>;
 
     scroller {
         layers = <5>;
