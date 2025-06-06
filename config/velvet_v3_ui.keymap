@@ -24,10 +24,10 @@
 
         Base {
             bindings = <
-&kp RA(T)  &kp Q  &kp W      &kp E         &kp R  &kp T                        &kp Y  &kp U           &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S      &kp D         &kp F  &kp G                        &kp H  &kp J           &kp K      &kp L     &kp SEMI  &kp BSLH
-&kp LSHFT  &kp Z  &kp X      &kp C         &kp V  &kp B                        &kp N  &kp M           &kp COMMA  &kp DOT   &kp LALT  &kp RSHFT
-                  &kp LCTRL  &kp LEFT_ALT  &mo 7  &mo 1  &kp SPACE    &kp RET  &mo 2  &cap_sen 4 MB1  &kp LBKT   &kp RBKT
+&kp RA(T)  &kp Q  &kp W      &kp E         &kp R  &kp T                           &kp Y  &kp U           &kp I      &kp O      &kp P      &kp LEFT_BRACKET
+&kp TAB    &kp A  &kp S      &kp D         &kp F  &kp G                           &kp H  &kp J           &kp K      &kp L      &kp SEMI   &kp SINGLE_QUOTE
+&kp LSHFT  &kp Z  &kp X      &kp C         &kp V  &kp B                           &kp N  &kp M           &kp COMMA  &kp DOT    &kp RA(M)  &kp RSHFT
+                  &kp LCTRL  &kp LEFT_ALT  &mo 7  &mo 1  &kp SPACE    &kp ESCAPE  &mo 2  &cap_sen 4 MB1  &kp LALT   &kp LCTRL
             >;
 
             label = "Base";
