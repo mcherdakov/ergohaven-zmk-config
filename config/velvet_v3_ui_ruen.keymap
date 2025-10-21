@@ -17,14 +17,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            hold-while-undecided;
-        };
-
-        zip_auto_mouse: zip_auto_mouse {
-            compatible = "zmk,input-processor-temp-layer";
-            #input-processor-cells = <2>;
-            require-prior-idle-ms = <800>;
-            excluded-positions = <>;
         };
     };
 
@@ -240,7 +232,7 @@
 &trackball { cpi = <1000>; };
 
 &trackball_listener {
-    input-processors = <&zip_auto_mouse 6 500>, <&zip_xy_scaler 20 20>;
+    input-processors = <&zip_xy_scaler 20 20>;
 
     scroller {
         layers = <7>;
