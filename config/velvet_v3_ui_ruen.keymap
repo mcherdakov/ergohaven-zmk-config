@@ -123,7 +123,7 @@
 &none           &kp Q  &kp W             &kp E         &kp R  &kp T                        &kp Y  &kp U  &kp I         &kp O             &kp P  &none
 &kp LEFT_SHIFT  &kp A  &kp S             &kp D         &kp F  &kp G                        &kp H  &kp J  &kp K         &kp L             &none  &kp RIGHT_SHIFT
 &kp TAB         &kp Z  &kp X             &kp C         &kp V  &kp B                        &kp N  &kp M  &none         &none             &none  &none
-                       &kp LEFT_CONTROL  &kp LEFT_ALT  &mo 6  &mo 2  &kp SPACE    &kp RET  &mo 4  &none  &kp LEFT_ALT  &kp LEFT_CONTROL
+                       &kp LEFT_CONTROL  &kp LEFT_ALT  &mo 6  &mo 2  &kp SPACE    &kp ESC  &mo 4  &none  &kp LEFT_ALT  &kp LEFT_CONTROL
             >;
 
             display-name = "Base";
@@ -131,10 +131,10 @@
 
         ru {
             bindings = <
-&kp RU_CYRILLIC_IO  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA
-&kp LEFT_SHIFT      &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE        &kp RIGHT_SHIFT
-&kp TAB             &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_HARD_SIGN  &kp RU_CYRILLIC_E
-                                             &kp LEFT_CONTROL      &kp LEFT_ALT        &mo 6               &mo 3               &kp SPACE    &kp ENTER  &mo 4               &none                      &kp LEFT_ALT         &kp LEFT_CONTROL
+&kp RU_CYRILLIC_IO  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA
+&kp LEFT_SHIFT      &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                        &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE        &kp RIGHT_SHIFT
+&kp TAB             &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_HARD_SIGN  &kp RU_CYRILLIC_E
+                                             &kp LEFT_CONTROL      &kp LEFT_ALT        &mo 6               &mo 3               &kp SPACE    &kp ESC  &mo 4               &none                      &kp LEFT_ALT         &kp LEFT_CONTROL
             >;
 
             display-name = "User0";
@@ -142,10 +142,10 @@
 
         sym_en {
             bindings = <
-&kp PERCENT  &kp UNDER   &kp LEFT_BRACE        &kp STAR   &kp RIGHT_BRACE    &kp TILDE                  &kp N6    &kp N7        &kp N8         &kp N9       &kp N0         &none
-&kp AMPS     &kp MINUS   &kp LEFT_PARENTHESIS  &kp SLASH  &kp RPAR           &kp BSLH                   &none     &kp DOT       &kp DOWN       &kp UP       &kp RIGHT      &none
-&kp CARET    &kp DOLLAR  &kp LEFT_BRACKET      &kp PLUS   &kp RIGHT_BRACKET  &none                      &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &none
-                         &none                 &none      &none              &none      &none    &none  &mo 5     &none         &none          &none
+&kp PERCENT  &kp UNDER   &kp LEFT_BRACE        &kp STAR   &kp RIGHT_BRACE    &kp TILDE                  &kp GRAVE  &kp LESS_THAN  &kp EQUAL      &kp GREATER_THAN  &kp PIPE       &none
+&kp AMPS     &kp MINUS   &kp LEFT_PARENTHESIS  &kp SLASH  &kp RPAR           &kp BSLH                   &none      &kp DOT        &kp DOWN       &kp UP            &kp RIGHT      &none
+&kp CARET    &kp DOLLAR  &kp LEFT_BRACKET      &kp PLUS   &kp RIGHT_BRACKET  &none                      &kp CLCK   &kp LC(LEFT)   &kp PAGE_DOWN  &kp PAGE_UP       &kp LC(RIGHT)  &none
+                         &none                 &none      &none              &none      &none    &none  &mo 5      &none          &none          &none
             >;
 
             display-name = "Navigation";
@@ -153,10 +153,10 @@
 
         sym_ru {
             bindings = <
-&kp RU_PERCENT  &kp RU_UNDER  &en LEFT_BRACE    &kp RU_ASTRK  &en RIGHT_BRACE    &en TILDE                      &trans  &trans      &trans  &trans  &trans  &trans
-&en AMPS        &kp RU_MINUS  &kp RU_LPAR       &kp RU_SLASH  &kp RU_RPAR        &kp RU_BSLH                    &trans  &kp RU_DOT  &trans  &trans  &trans  &trans
-&en CARET       &en DOLLAR    &en LEFT_BRACKET  &kp RU_PLUS   &en RIGHT_BRACKET  &trans                         &trans  &trans      &trans  &trans  &trans  &trans
-                              &trans            &trans        &trans             &trans       &trans    &trans  &trans  &trans      &trans  &trans
+&kp RU_PERCENT  &kp RU_UNDER  &en LEFT_BRACE    &kp RU_ASTRK  &en RIGHT_BRACE    &en TILDE                      &en GRAVE  &en LESS_THAN  &kp RU_EQUAL  &en GREATER_THAN  &en PIPE  &trans
+&en AMPS        &kp RU_MINUS  &kp RU_LPAR       &kp RU_SLASH  &kp RU_RPAR        &kp RU_BSLH                    &trans     &kp RU_DOT     &trans        &trans            &trans    &trans
+&en CARET       &en DOLLAR    &en LEFT_BRACKET  &kp RU_PLUS   &en RIGHT_BRACKET  &trans                         &trans     &trans         &trans        &trans            &trans    &trans
+                              &trans            &trans        &trans             &trans       &trans    &trans  &trans     &trans         &trans        &trans
             >;
 
             display-name = "User1";
