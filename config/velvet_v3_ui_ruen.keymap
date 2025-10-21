@@ -142,10 +142,10 @@
 
         sym_en {
             bindings = <
-&kp PERCENT  &kp UNDER  &kp LEFT_BRACE  &kp STAR  &kp RIGHT_BRACE  &kp TILDE                  &kp N6    &kp N7        &kp N8         &kp N9       &kp N0         &none
-&none        &none      &none           &none     &none            &kp RET                    &none     &kp DOT       &kp DOWN       &kp UP       &kp RIGHT      &none
-&none        &none      &kp HOME        &kp INS   &kp END          &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &none
-                        &none           &none     &none            &none      &none    &none  &mo 5     &none         &none          &none
+&kp PERCENT  &kp UNDER  &kp LEFT_BRACE        &kp STAR   &kp RIGHT_BRACE  &kp TILDE                  &kp N6    &kp N7        &kp N8         &kp N9       &kp N0         &none
+&kp AMPS     &kp MINUS  &kp LEFT_PARENTHESIS  &kp SLASH  &kp RPAR         &kp BSLH                   &none     &kp DOT       &kp DOWN       &kp UP       &kp RIGHT      &none
+&none        &none      &kp HOME              &kp INS    &kp END          &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &none
+                        &none                 &none      &none            &none      &none    &none  &mo 5     &none         &none          &none
             >;
 
             display-name = "Navigation";
@@ -153,10 +153,10 @@
 
         sym_ru {
             bindings = <
-&kp RU_PERCENT  &kp RU_UNDER  &en LEFT_BRACE  &kp RU_ASTRK  &en RIGHT_BRACE  &en TILDE                    &trans  &trans      &trans  &trans  &trans  &trans
-&trans          &trans        &trans          &trans        &trans           &trans                       &trans  &kp RU_DOT  &trans  &trans  &trans  &trans
-&trans          &trans        &trans          &trans        &trans           &trans                       &trans  &trans      &trans  &trans  &trans  &trans
-                              &trans          &trans        &trans           &trans     &trans    &trans  &trans  &trans      &trans  &trans
+&kp RU_PERCENT  &kp RU_UNDER  &en LEFT_BRACE  &kp RU_ASTRK  &en RIGHT_BRACE  &en TILDE                      &trans  &trans      &trans  &trans  &trans  &trans
+&en AMPS        &kp RU_MINUS  &kp RU_LPAR     &kp RU_SLASH  &kp RU_RPAR      &kp RU_BSLH                    &trans  &kp RU_DOT  &trans  &trans  &trans  &trans
+&trans          &trans        &trans          &trans        &trans           &trans                         &trans  &trans      &trans  &trans  &trans  &trans
+                              &trans          &trans        &trans           &trans       &trans    &trans  &trans  &trans      &trans  &trans
             >;
 
             display-name = "User1";
