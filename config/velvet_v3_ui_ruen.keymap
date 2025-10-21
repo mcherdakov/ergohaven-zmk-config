@@ -123,7 +123,7 @@
 &none           &kp Q  &kp W             &kp E         &kp R  &kp T                        &kp Y  &kp U  &kp I         &kp O             &kp P  &none
 &kp LEFT_SHIFT  &kp A  &kp S             &kp D         &kp F  &kp G                        &kp H  &kp J  &kp K         &kp L             &none  &kp RIGHT_SHIFT
 &kp TAB         &kp Z  &kp X             &kp C         &kp V  &kp B                        &kp N  &kp M  &none         &none             &none  &none
-                       &kp LEFT_CONTROL  &kp LEFT_ALT  &mo 6  &mo 2  &kp SPACE    &kp ESC  &mo 4  &none  &kp LEFT_ALT  &kp LEFT_CONTROL
+                       &kp LEFT_CONTROL  &kp LEFT_ALT  &mo 7  &mo 2  &kp SPACE    &kp ESC  &mo 4  &none  &kp LEFT_ALT  &kp LEFT_CONTROL
             >;
 
             display-name = "Base";
@@ -134,7 +134,7 @@
 &kp RU_CYRILLIC_IO  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                        &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE         &kp RU_CYRILLIC_HA
 &kp LEFT_SHIFT      &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                        &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE        &kp RIGHT_SHIFT
 &kp TAB             &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_HARD_SIGN  &kp RU_CYRILLIC_E
-                                             &kp LEFT_CONTROL      &kp LEFT_ALT        &mo 6               &mo 3               &kp SPACE    &kp ESC  &mo 4               &none                      &kp LEFT_ALT         &kp LEFT_CONTROL
+                                             &kp LEFT_CONTROL      &kp LEFT_ALT        &mo 7               &mo 3               &kp SPACE    &kp ESC  &mo 5               &none                      &kp LEFT_ALT         &kp LEFT_CONTROL
             >;
 
             display-name = "User0";
@@ -145,7 +145,7 @@
 &kp PERCENT  &kp UNDER   &kp LEFT_BRACE        &kp STAR   &kp RIGHT_BRACE    &kp TILDE                      &kp GRAVE  &kp LESS_THAN  &kp EQUAL  &kp GREATER_THAN  &kp PIPE  &none
 &kp AMPS     &kp MINUS   &kp LEFT_PARENTHESIS  &kp SLASH  &kp RPAR           &kp BSLH                       &kp EXCL   &kp DOT        &kp COMMA  &kp QMARK         &kp SEMI  &kp AT
 &kp CARET    &kp DOLLAR  &kp LEFT_BRACKET      &kp PLUS   &kp RIGHT_BRACKET  &none                          &kp HASH   &kp BACKSPACE  &none      &none             &none     &none
-                         &none                 &none      &none              &none      &none    &kp ENTER  &mo 5      &none          &none      &none
+                         &none                 &none      &none              &none      &none    &kp ENTER  &mo 6      &none          &none      &none
             >;
 
             display-name = "Navigation";
@@ -156,21 +156,32 @@
 &kp RU_PERCENT  &kp RU_UNDER  &en LEFT_BRACE    &kp RU_ASTRK  &en RIGHT_BRACE    &en TILDE                        &en GRAVE    &en LESS_THAN  &kp RU_EQUAL  &en GREATER_THAN  &en PIPE     &none
 &en AMPS        &kp RU_MINUS  &kp RU_LPAR       &kp RU_SLASH  &kp RU_RPAR        &kp RU_BSLH                      &kp RU_EXCL  &kp RU_DOT     &kp RU_COMMA  &kp RU_QMARK      &kp RU_SEMI  &en AT
 &en CARET       &en DOLLAR    &en LEFT_BRACKET  &kp RU_PLUS   &en RIGHT_BRACKET  &none                            &en HASH     &kp BACKSPACE  &none         &none             &none        &none
-                              &none             &none         &none              &none        &none    &kp ENTER  &mo 5        &none          &none         &none
+                              &none             &none         &none              &none        &none    &kp ENTER  &mo 6        &none          &none         &none
             >;
 
             display-name = "User1";
         };
 
-        sym {
+        num_en {
             bindings = <
-&trans  &trans    &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                      &kp CARET  &kp DQT   &kp UNDER  &kp SQT   &trans    &trans
-&trans  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                       &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
-&trans  &trans    &kp STAR  &kp COLON  &kp FSLH  &kp DLLR                       &kp AT     &lg_tog   &kp TILDE  &kp AMPS  &trans    &trans
-                  &trans    &trans     &trans    &mo 5      &kp HASH    &trans  &trans     &trans    &trans     &trans
+&trans  &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans                              &trans          &kp LS(GRAVE)  &trans           &kp GRAVE  &trans     &trans
+&trans  &trans  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_0)                    &kp LEFT_ARROW  &kp DOWN       &kp UP           &kp RIGHT  &kp LA(L)  &trans
+&trans  &trans  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(DOT)                         &trans          &lg_tog        &kp PRINTSCREEN  &trans     &trans     &trans
+                &trans            &trans            &trans            &mo 6             &trans    &trans  &trans          &trans         &trans           &trans
             >;
 
-            display-name = "Symbols";
+            label = "num_en";
+        };
+
+        num_ru {
+            bindings = <
+&trans  &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans                              &trans          &kp LS(GRAVE)  &trans           &kp GRAVE  &trans     &trans
+&trans  &trans  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_0)                    &kp LEFT_ARROW  &kp DOWN       &kp UP           &kp RIGHT  &kp LA(L)  &trans
+&trans  &trans  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(DOT)                         &trans          &lg_tog        &kp PRINTSCREEN  &trans     &trans     &trans
+                &trans            &trans            &trans            &mo 6             &trans    &trans  &trans          &trans         &trans           &trans
+            >;
+
+            label = "num_ru";
         };
 
         adj {
