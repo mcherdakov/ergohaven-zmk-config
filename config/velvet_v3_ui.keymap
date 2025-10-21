@@ -13,66 +13,69 @@
         cap_sen: cap_sen {
             compatible = "zmk,behavior-hold-tap";
             label = "CAP_SEN";
-            bindings = <&mo>, <&mkp>;
+            bindings = <&trans>, <&none>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            hold-while-undecided;
         };
+    };
 
-        mouse_layer: mouse_layer {
-            compatible = "zmk,behavior-sticky-key";
-            label = "MOUSE_LAYER";
-            bindings = <&mo>;
-            #binding-cells = <1>;
-            release-after-ms = <200>;
-        };
-
-        zip_auto_mouse: zip_auto_mouse {
-            compatible = "zmk,input-processor-temp-layer";
-            #input-processor-cells = <2>;
-            require-prior-idle-ms = <800>;
-            excluded-positions = <>;
+    macros {
+        lg_tog: lg_tog {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &tog 1>;
+            label = "LG_TOG";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        en {
             bindings = <
-&kp ESC    &kp Q  &kp W     &kp E     &kp R      &kp T                        &kp Y  &kp U  &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S     &kp D     &kp F      &kp G                        &kp H  &kp J  &kp K      &kp L     &kp SEMI  &kp BSLH
-&kp LSHFT  &kp Z  &kp X     &kp C     &kp V      &kp B                        &kp N  &kp M  &kp COMMA  &kp DOT   &kp SQT   &kp RSHFT
-                  &kp LALT  &kp LGUI  &kp LCTRL  &mo 1  &kp SPACE    &kp RET  &mo 2  &none  &kp LBKT   &kp RBKT
+&kp RA(T)       &kp Q  &kp W      &kp E         &kp R  &kp T                           &kp Y  &kp U           &kp I     &kp O      &kp P  &none
+&kp LEFT_SHIFT  &kp A  &kp S      &kp D         &kp F  &kp G                           &kp H  &kp J           &kp K     &kp L      &none  &kp RIGHT_SHIFT
+&kp TAB         &kp Z  &kp X      &kp C         &kp V  &kp B                           &kp N  &kp M           &none     &none      &none  &none
+                       &kp LCTRL  &kp LEFT_ALT  &mo 5  &mo 2  &kp SPACE    &kp ESCAPE  &mo 3  &cap_sen 4 MB1  &kp LALT  &kp LCTRL
             >;
 
-            display-name = "Base";
+            label = "Base";
         };
 
-        nav {
+        ru {
+            label = "ru";
             bindings = <
-&trans  &kp N1  &kp N2    &kp N3   &kp N4   &kp N5                     &kp N6    &kp N7        &kp N8         &kp N9       &kp N0         &trans
-&trans  &trans  &trans    &trans   &trans   &kp RET                    &trans    &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
-&trans  &trans  &kp HOME  &kp INS  &kp END  &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
-                &trans    &trans   &trans   &trans   &trans    &trans  &mo 3     &trans        &trans         &trans
+&kp RA(T)       &kp Q  &kp W      &kp E         &kp R  &kp T                           &kp Y  &kp U           &kp I          &kp O             &kp P            &kp LEFT_BRACE
+&kp LEFT_SHIFT  &kp A  &kp S      &kp D         &kp F  &kp G                           &kp H  &kp J           &kp K          &kp L             &kp COLON        &kp RIGHT_SHIFT
+&kp TAB         &kp Z  &kp X      &kp C         &kp V  &kp B                           &kp N  &kp M           &kp LESS_THAN  &kp GREATER_THAN  &kp RIGHT_BRACE  &kp DOUBLE_QUOTES
+                       &kp LCTRL  &kp LEFT_ALT  &mo 5  &mo 2  &kp SPACE    &kp ESCAPE  &mo 3  &cap_sen 4 MB1  &kp LALT       &kp LCTRL
+            >;
+        };
+
+        Navigation {
+            bindings = <
+&kp N5         &kp LS(MINUS)  &kp RA(RS(LEFT_BRACKET))  &kp KP_ASTERISK  &kp RA(RS(RIGHT_BRACKET))  &kp RA(SINGLE_QUOTE)                       &kp RA(GRAVE)  &kp RA(COMMA)  &kp KP_EQUAL  &kp RA(DOT)   &kp LS(BACKSLASH)  &kp DELETE
+&kp RA(SLASH)  &kp KP_MINUS   &kp NUMBER_9              &kp BSLH         &kp NUMBER_0               &kp RA(BACKSLASH)                          &kp NUMBER_1   &kp DOT        &kp COMMA     &kp NUMBER_7  &kp LS(COMMA)      &kp NUMBER_2
+&kp NUMBER_6   &kp NUMBER_4   &kp RA(LEFT_BRACKET)      &kp PLUS         &kp RA(RIGHT_BRACKET)      &trans                                     &kp NUMBER_3   &kp BACKSPACE  &trans        &trans        &trans             &trans
+                              &trans                    &trans           &trans                     &trans                &trans    &kp ENTER  &mo 4          &trans         &trans        &trans
             >;
 
-            display-name = "Navigation";
+            label = "Navigation";
         };
 
-        sym {
+        Symbols {
             bindings = <
-&trans  &trans    &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                      &kp CARET  &kp DQT   &kp UNDER  &kp SQT   &trans    &trans
-&trans  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                       &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
-&trans  &trans    &kp STAR  &kp COLON  &kp FSLH  &kp DLLR                       &kp AT     &kp PIPE  &kp TILDE  &kp AMPS  &trans    &trans
-                  &trans    &trans     &trans    &mo 3      &kp HASH    &trans  &trans     &trans    &trans     &trans
+&trans  &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans                              &trans          &kp LS(GRAVE)  &trans           &kp GRAVE  &trans     &trans
+&trans  &trans  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_0)                    &kp LEFT_ARROW  &kp DOWN       &kp UP           &kp RIGHT  &kp LA(L)  &trans
+&trans  &trans  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(DOT)                         &trans          &lg_tog        &kp PRINTSCREEN  &trans     &trans     &trans
+                &trans            &trans            &trans            &mo 4             &trans    &trans  &trans          &trans         &trans           &trans
             >;
 
-            display-name = "Symbols";
+            label = "Symbols";
         };
 
-        adj {
+        Adjust {
             bindings = <
 &bootloader  &none  &kp F1  &kp F2   &kp F3   &kp F4                   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &none        &none  &kp F5  &kp F6   &kp F7   &kp F8                   &out OUT_BLE  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &none         &studio_unlock
@@ -80,51 +83,34 @@
                     &none   &none    &none    &none    &none    &none  &none         &none         &none             &none
             >;
 
-            display-name = "Adjust";
+            label = "Adjust";
         };
 
-        mouse {
+        Mouse {
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &mo 5   &mkp MB3  &mkp MB2  &mkp MB1  &mo 6                     &mo 6   &mkp MB1  &mkp MB2  &mkp MB3  &mo 5   &trans
+&trans  &mo 6   &mkp MB2  &mkp MB3  &mkp MB1  &mo 7                     &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &mo 6   &trans
 &trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
                 &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
             >;
-
-            display-name = "Mouse";
         };
 
-        scroll {
-            bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-                &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
-            >;
-
-            display-name = "Scroll";
-        };
-
-        sniper {
-            bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-                &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
-            >;
-
-            display-name = "Sniper";
-        };
-
-        User0 {
+        Scroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
+        };
 
-            display-name = "User0";
+        Sniper {
+            bindings = <
+&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
+                &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
+            >;
         };
 
         User1 {
@@ -135,7 +121,7 @@
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
-            display-name = "User1";
+            label = "User1";
         };
 
         User2 {
@@ -146,7 +132,7 @@
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
-            display-name = "User2";
+            label = "User2";
         };
 
         User3 {
@@ -157,7 +143,7 @@
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
-            display-name = "User3";
+            label = "User3";
         };
     };
 };
