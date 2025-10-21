@@ -164,10 +164,10 @@
 
         num_en {
             bindings = <
-&trans  &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans                              &trans          &kp LS(GRAVE)  &trans           &kp GRAVE  &trans     &trans
-&trans  &trans  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_0)                    &kp LEFT_ARROW  &kp DOWN       &kp UP           &kp RIGHT  &kp LA(L)  &trans
-&trans  &trans  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(DOT)                         &trans          &lg_tog        &kp PRINTSCREEN  &trans     &trans     &trans
-                &trans            &trans            &trans            &mo 6             &trans    &trans  &trans          &trans         &trans           &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &trans                       &trans          &kp DQT   &trans           &kp SQT    &trans     &trans
+&trans  &trans  &kp N4  &kp N5  &kp N6  &kp N0                       &kp LEFT_ARROW  &kp DOWN  &kp UP           &kp RIGHT  &kp LA(L)  &trans
+&trans  &trans  &kp N7  &kp N8  &kp N9  &kp COLON                    &trans          &lg_tog   &kp PRINTSCREEN  &trans     &trans     &trans
+                &trans  &trans  &trans  &mo 6      &trans    &trans  &trans          &trans    &trans           &trans
             >;
 
             label = "num_en";
@@ -175,10 +175,10 @@
 
         num_ru {
             bindings = <
-&trans  &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans                              &trans          &kp LS(GRAVE)  &trans           &kp GRAVE  &trans     &trans
-&trans  &trans  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_0)                    &kp LEFT_ARROW  &kp DOWN       &kp UP           &kp RIGHT  &kp LA(L)  &trans
-&trans  &trans  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(DOT)                         &trans          &lg_tog        &kp PRINTSCREEN  &trans     &trans     &trans
-                &trans            &trans            &trans            &mo 6             &trans    &trans  &trans          &trans         &trans           &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &trans                          &trans          &kp RU_DQT  &trans           &en SQT    &trans     &trans
+&trans  &trans  &kp N4  &kp N5  &kp N6  &kp N0                          &kp LEFT_ARROW  &kp DOWN    &kp UP           &kp RIGHT  &kp LA(L)  &trans
+&trans  &trans  &kp N7  &kp N8  &kp N9  &kp RU_COLON                    &trans          &lg_tog     &kp PRINTSCREEN  &trans     &trans     &trans
+                &trans  &trans  &trans  &mo 6         &trans    &trans  &trans          &trans      &trans           &trans
             >;
 
             label = "num_ru";
